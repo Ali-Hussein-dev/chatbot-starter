@@ -2,10 +2,12 @@ import { useStore } from "@/hooks/use-store";
 import { Paper, Text } from "@mantine/core";
 import { TiUser } from 'react-icons/ti'
 import { BsRobot } from 'react-icons/bs'
+import { Markdown } from "./Markdown";
+
 //======================================
 export const UserMessage = ({ text = "" }) => {
     return (
-        <div className="w-full  gap-2 py-4 flex-row-start">
+        <div className="w-full  gap-2 py-4 flex items-start justify-start">
             <TiUser size="20" className="text-lime-600" />
             <Text color="dimmed">{text}</Text>{" "}
         </div>
@@ -14,9 +16,9 @@ export const UserMessage = ({ text = "" }) => {
 //======================================
 export const AiMessage = ({ text = "" }) => {
     return (
-        <div className="w-full  gap-2 py-4 flex-row-start">
+        <div className="w-full  gap-2 py-4 flex items-start justify-start">
             <BsRobot size="20" className="text-indigo-400" />
-            <Text>{text}</Text>{" "}
+            <Markdown content={text} />
         </div>
     );
 };
