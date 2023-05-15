@@ -6,6 +6,7 @@ import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
 import { MantineProvider } from "@mantine/core";
+import { themeOverride } from "@/mantine/theme-override";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -19,6 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         theme={{
           /** Put your mantine theme override here */
           colorScheme: "dark",
+          ...themeOverride
         }}
       >
         <Component {...pageProps} />
