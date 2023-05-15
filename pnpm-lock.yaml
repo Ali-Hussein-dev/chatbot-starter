@@ -30,8 +30,10 @@ specifiers:
   prisma: ^4.11.0
   react: 18.2.0
   react-dom: 18.2.0
+  react-hook-form: ^7.43.9
   react-icons: ^4.8.0
   superjson: 1.12.2
+  tailwind-custom-utilities: ^1.0.2
   tailwindcss: ^3.3.0
   typescript: ^5.0.2
   zod: ^3.21.4
@@ -53,6 +55,7 @@ dependencies:
   next-auth: 4.22.1_cmp7sjki5xcmfyvhcokzzink7a
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.43.9_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
   superjson: 1.12.2
   zod: 3.21.4
@@ -73,6 +76,7 @@ devDependencies:
   prettier: 2.8.8
   prettier-plugin-tailwindcss: 0.2.8_prettier@2.8.8
   prisma: 4.14.0
+  tailwind-custom-utilities: 1.0.2
   tailwindcss: 3.3.2
   typescript: 5.0.4
 
@@ -3083,6 +3087,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.43.9_react@18.2.0:
+    resolution: {integrity: sha512-AUDN3Pz2NSeoxQ7Hs6OhQhDr6gtF9YRuutGDwPQqhSUAHJSgGl2VeY3qN19MG0SucpjgDiuMJ4iC5T5uB+eaNQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-icons/4.8.0_react@18.2.0:
     resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
     peerDependencies:
@@ -3464,6 +3477,10 @@ packages:
   /tabbable/6.1.2:
     resolution: {integrity: sha512-qCN98uP7i9z0fIS4amQ5zbGBOq+OSigYeGvPy7NDk8Y9yncqDZ9pRPgfsc2PJIVM9RrJj7GIfuRgmjoUU9zTHQ==}
     dev: false
+
+  /tailwind-custom-utilities/1.0.2:
+    resolution: {integrity: sha512-Zl0VXqdXJwv72cqZprbQJx81gkeSIu6qiji+yaW2YEHIt8DO72CNv/lkOTqbhSTSt9V3ZCYjjFTgAaHGpQpnLQ==}
+    dev: true
 
   /tailwindcss/3.3.2:
     resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}

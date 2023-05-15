@@ -20,7 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         theme={{
           /** Put your mantine theme override here */
           colorScheme: "dark",
-          ...themeOverride
+          ...themeOverride,
         }}
       >
         <Component {...pageProps} />
