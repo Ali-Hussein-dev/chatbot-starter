@@ -15,8 +15,7 @@ const Home: NextPage = () => {
     reload,
   } = useChat({
     api: "api/openai",
-    initialMessages: [
-    ],
+    initialMessages: [],
   });
   return (
     <>
@@ -26,10 +25,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppShell padding={0}>
-        <main className="flex h-full flex-col items-center justify-end py-4">
+        <main className="flex h-full flex-col items-center justify-end py-4 ">
           <div className="h-full w-full flex-col-center">
             {messages.length === 0 ? (
-              <div className="mx-auto pt-10 ">Waiting for your message...</div>
+              <div className="mx-auto grid h-full place-items-center">
+                Waiting for your message...
+              </div>
             ) : (
               <Chats messages={messages} />
             )}
@@ -53,6 +54,7 @@ const Home: NextPage = () => {
               input={input}
               handleInputChange={handleInputChange}
               handleSubmit={handleSubmit}
+              isLoading={isLoading}
             />
           </div>
         </main>

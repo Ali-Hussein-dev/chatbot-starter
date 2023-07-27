@@ -24,7 +24,6 @@ export const AiMessage = ({ text = "" }) => {
 
 //======================================
 export const Chats = ({ messages }: { messages: Message[] }) => {
-  // const chats = useStore(s => s.chats)
   return (
     <div className="w-full max-w-3xl grow py-2">
       {messages.length > 0 ? (

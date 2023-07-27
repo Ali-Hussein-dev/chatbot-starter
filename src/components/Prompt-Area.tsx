@@ -1,16 +1,18 @@
 import { ActionIcon, Textarea } from "@mantine/core";
 import { BsSendFill } from "react-icons/bs";
 //======================================
-export const PromptArea = ({ input, handleInputChange, handleSubmit }: {
+export const PromptArea = ({ input, handleInputChange, handleSubmit,isLoading }: {
   input: string;
   handleInputChange: (e: any) => void;
   handleSubmit: (e: any) => void;
+  isLoading: boolean;
 }) => {
-  // const {
-  //   onSubmit,
-  //   methods: { register, handleSubmit },
-  // } = useFetch();
-
+  const onKeyPress: React.KeyboardEventHandler = (e) => {
+    if (e.code === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit(e);
+    }
+  };
   return (
     <form
       className="min-h-20 sticky bottom-0 w-full bg-[#141517]/10 pb-2 backdrop-blur-sm"
@@ -25,6 +27,7 @@ export const PromptArea = ({ input, handleInputChange, handleSubmit }: {
         autosize
         value={input}
         onChange={handleInputChange}
+              onKeyDown={isLoading ? undefined : onKeyPress}
         rightSection={
           <ActionIcon type="submit">
             <BsSendFill />
