@@ -2,7 +2,7 @@
 
 ## Description
 
-Learn more [Blog](https://chatbot-starter.vercel.app/)
+Learn more [Blog](https://ali-blog.hashnode.dev/chatbot-starter-demo)
 
 ## setup
 
